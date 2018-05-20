@@ -1,0 +1,65 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.pyc
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Databases #
+#############
+*.sql
+*.sqlite
+dump.rdb
+
+# OS generated files #
+######################
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.DocumentRevisions-V100
+.DS_Store
+.DS_Store?
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+ehthumbs.db
+Network Trash Folder
+Temporary Items
+Thumbs.db
+
+# Icon must end with two `\r`s, but `\r\r` is converted to `\r\n`, hence `[\r]`
+# http://stackoverflow.com/questions/17556250/how-to-ignore-icon-in-git
+Icon[\r]
+
+# Project generated files #
+###########################
+bower_components
+bundle.js*
+derby.log
+**/*.log
+logs
+metastore_db
+node_modules
+**/*.tmp
+firebase-debug.log
