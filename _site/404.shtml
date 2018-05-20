@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="r2BXS8Qr3dFkWkO1zzASGULWscqn5vJfxuMIQ0SysP0" />
+  
+  <title>404</title>
+  <meta name="description" content="The Midwest Access Coalition provides accommodation and support to those who travel to Chicago to access a safe, legal abortion when prohibitive legislation limits access closer to home.">
+
+  <!-- JQUERY -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+    crossorigin="anonymous"></script>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- GOOGLE FONTS -->
+
+  <!-- SITE STYLES -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/404.shtml">
+  <link rel="alternate" type="application/rss+xml" title="Midwest Access Coalition" href="http://localhost:4000/feed.xml" />
+
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75847384-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <!-- SITE SCRIPTS -->
+  <script src="js/event.js"></script>
+</head>
+
+
+  <body>
+    <div id="nonFooter">
+
+      <div class="page-content">
+        <div class="wrapper">
+          <div class="content-box">
+            <h1>Hi, you've reached the Midwest Access Coalition.</h1>
+
+<h3>Either this page doesn't exist or we're performing temporary maintenance on our site right now.</h3>
+
+<h4>If you need our assistance, please email us at <a href="mailto:midwestaccesscoalition@gmail.com">midwestaccesscoalition@gmail.com</h4>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

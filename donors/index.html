@@ -1,0 +1,39 @@
+---
+permalink: "/donors/"
+layout: page
+---
+
+<h3>A huge THANK YOU to...</h3>
+
+
+<div>
+
+<ul>
+	{% for donor in site.categories.donors %}
+		<li>
+	  	<a href="{{ donor.link }}"> {{ donor.title }} </a>
+	  	<p class="description">{{ donor.content }}</p>
+	  </li>
+	{% endfor %}
+</ul>
+
+
+
+<!-- * [Boulevard Bikes](http://www.boulevardbikeshop.com/)
+* [Chicago Vintage Weddings](http://chicagovintageweddings.com/)
+* [Detroit Rose Canles Co.](https://www.etsy.com/shop/DETROITROSECANDLECO)
+* [Dulcet Design](http://dulcetdesignusa.com/)
+* [Golden Egg](http://goldeneggpress.com/)
+* [Hank by Henry](http://hankbyhenry.com/)
+* [Justin Arts](http://www.justinsantora.com/)
+* [Martine USA](http://martineusa.com/)
+* [Maya Mueble](http://www.mayamueble.com/)
+* [Mighty Julio](http://jcrwork.bigcartel.com/)
+* [Never Sleeping Inc.](http://neversleeping.com/)
+* [Perpetually Yours Pets](http://www.perpetuallyyourspets.com/)
+* [Resketch](http://resketch.org/)
+* [Shades of Grey](http://shadesofgreyjewelry.com/)
+* [The Living Room](http://wearepolymathic.com/events/)
+* [YesJess](http://yesjessknits.com/)
+ -->
+</div>

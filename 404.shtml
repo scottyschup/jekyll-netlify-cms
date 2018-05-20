@@ -1,0 +1,12 @@
+---
+title: '404'
+page_id: maintenance
+layout: maintenance
+nav_level: 
+---
+
+<h1>Hi, you've reached the Midwest Access Coalition.</h1>
+
+<h3>Either this page doesn't exist or we're performing temporary maintenance on our site right now.</h3>
+
+<h4>If you need our assistance, please email us at <a href="mailto:midwestaccesscoalition@gmail.com">midwestaccesscoalition@gmail.com</h4>

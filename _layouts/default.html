@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="nonFooter">
+
+      {% include header.html %}
+
+      <div class="page-content">
+        {% if site.upcoming_event %}
+        <div class="wrapper">
+          {% include eventbrite.html %}
+        </div>
+        {% endif %}
+        <div class="wrapper">
+          {% include sidebar.html %}
+          <div class="content-box">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      {% include footer.html %}
+    </div>
+
+    {% include javascripts.html %}
+  </body>
+
+</html>
