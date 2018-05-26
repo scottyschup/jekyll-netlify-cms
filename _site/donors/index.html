@@ -7,8 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="r2BXS8Qr3dFkWkO1zzASGULWscqn5vJfxuMIQ0SysP0" />
   
-  <title>Detroit Rose Candle Co</title>
-  <meta name="description" content="">
+  <title>Midwest Access Coalition</title>
+  <meta name="description" content="The Midwest Access Coalition provides accommodation and support to those who travel to Chicago to access a safe, legal abortion when prohibitive legislation limits access closer to home.">
+
+  
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw",
+    authDomain: "mac-site.firebaseapp.com",
+    databaseURL: "https://mac-site.firebaseio.com",
+    projectId: "mac-site",
+    storageBucket: "mac-site.appspot.com",
+    messagingSenderId: "348676765464"
+  };
+  firebase.initializeApp(config);
+</script>
 
   <!-- JQUERY -->
   <script
@@ -129,12 +144,39 @@
             <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Detroit Rose Candle Co</h1>
+    <h1 class="post-title"></h1>
   </header>
 
   <article class="post-content">
-    
+    <h3>A huge THANK YOU to...</h3>
 
+
+<div>
+
+<ul>
+	
+</ul>
+
+
+
+<!-- * [Boulevard Bikes](http://www.boulevardbikeshop.com/)
+* [Chicago Vintage Weddings](http://chicagovintageweddings.com/)
+* [Detroit Rose Canles Co.](https://www.etsy.com/shop/DETROITROSECANDLECO)
+* [Dulcet Design](http://dulcetdesignusa.com/)
+* [Golden Egg](http://goldeneggpress.com/)
+* [Hank by Henry](http://hankbyhenry.com/)
+* [Justin Arts](http://www.justinsantora.com/)
+* [Martine USA](http://martineusa.com/)
+* [Maya Mueble](http://www.mayamueble.com/)
+* [Mighty Julio](http://jcrwork.bigcartel.com/)
+* [Never Sleeping Inc.](http://neversleeping.com/)
+* [Perpetually Yours Pets](http://www.perpetuallyyourspets.com/)
+* [Resketch](http://resketch.org/)
+* [Shades of Grey](http://shadesofgreyjewelry.com/)
+* [The Living Room](http://wearepolymathic.com/events/)
+* [YesJess](http://yesjessknits.com/)
+ -->
+</div>
   </article>
 
 </div>
@@ -143,6 +185,16 @@
         </div>
       </div>
     </div>
+
+    <script>
+      console.log("in the script tag");
+      let mainContent = document.getElementById('mainContent');
+      let firebaseHeadingRef = firebase.database().ref().child("HOME");
+      console.log(firebaseHeadingRef);
+      firebaseHeadingRef.on('value', function(datasnapshot) {
+        mainContent.innerText = datasnapshot.val();
+      })
+    </script>
 
     <div id="footer">
       <footer class="site-footer">
@@ -276,14 +328,6 @@
             
               
                 <li>
-                  <a href="/resources.html">Resources</a>
-                </li>
-              
-            
-          
-            
-              
-                <li>
                   <a href="/support.html">Get Support</a>
                 </li>
               
@@ -386,23 +430,6 @@
 </footer>
 
     </div>
-
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDV-YrLgNYaECW_5HnmCPfr9l1zTTEOalk",
-    authDomain: "mac-website-197617.firebaseapp.com",
-    databaseURL: "https://mac-website-197617.firebaseio.com",
-    projectId: "mac-website-197617",
-    storageBucket: "mac-website-197617.appspot.com",
-    messagingSenderId: "382141687627"
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script type="text/javascript" src="js/hide-and-show.js"></script>
-
   </body>
 
 </html>
