@@ -38,10 +38,17 @@ If you don't have LastPass installed, you can do so [here](https://lastpass.com/
 
 To run firebase app locally:
 ```
-jekyll serve # if you want the app to reload whenever changes are made
-firebase serve
+# If you just need to view the site locally run
+jekyll build
+
+# Else if you plan on making changes to the site and want to see your changes update automatically, run the following and leave it open
+jekyll serve
+
+firebase serve # This command must be run regardless of which option you chose above
 ```
-If you run `firebase serve` and get this error message: `Error: Unable to authorize access to project mac-site`, then try running `firebase use --add` and select `mac-site` when prompted. If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
+If you run `firebase serve` and get this error message: `Error: Unable to authorize access to project mac-site`, then try running `firebase use --add` and select `mac-site` when prompted. Give it the alias "default".
+
+If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
 
 ## Deploy
 ```
