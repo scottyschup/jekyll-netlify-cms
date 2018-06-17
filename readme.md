@@ -38,11 +38,12 @@ If you don't have LastPass installed, you can do so [here](https://lastpass.com/
 ```
 firebase serve
 ```
+If you run `firebase serve` and get this error message: `Error: Unable to authorize access to project mac-site`, then try running `firebase use --add` and select `mac-site` when prompted. If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
 
 ## Deploy
 ```
 firebase deploy
 ```
-This will deploy whatever branch you're on locally.
+This will deploy whatever branch you're on locally to production.
 
 Navigate to {{url}}
