@@ -28,14 +28,17 @@ git checkout -b YOUR_BRANCH_NAME
 * When ready to merge to master, open a PR [here](https://github.com/MidwestAccessCoalition/firebase_site/compare) by selecting `master` as the base branch and your feature branch as the compare branch.
 * Report new issues [here](https://github.com/MidwestAccessCoalition/firebase_site/issues/new).
 
-## Local dev
+## Local dev cycle
 ```
 firebase login
 ```
 If you don't have the login credentials, contact nicole@midwestaccesscoalition.org to receive them through LastPass.
 
 If you don't have LastPass installed, you can do so [here](https://lastpass.com/misc_download2.php).
+
+To run firebase app locally:
 ```
+jekyll serve # if you want the app to reload whenever changes are made
 firebase serve
 ```
 If you run `firebase serve` and get this error message: `Error: Unable to authorize access to project mac-site`, then try running `firebase use --add` and select `mac-site` when prompted. If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
@@ -44,6 +47,9 @@ If you run `firebase serve` and get this error message: `Error: Unable to author
 ```
 firebase deploy
 ```
-This will deploy whatever branch you're on locally to production.
+This will deploy whatever branch you're on locally to production. If this fails and mentions something about database rules, it likely means you don't have write access and should contact <nicole@midwestaccesscoalition.org>.
 
-Navigate to {{url}}
+* Local URL: http://localhost:5000/
+* Firebase URL: https://mac-site.firebaseapp.com
+
+You can access the Firebase console at https://console.firebase.google.com/u/0/project/mac-site/overview.
