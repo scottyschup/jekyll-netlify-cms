@@ -63,3 +63,4 @@ metastore_db
 node_modules
 **/*.tmp
 firebase-debug.log
+.sass-cache
