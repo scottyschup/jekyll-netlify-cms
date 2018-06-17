@@ -10,6 +10,21 @@
   <title>Midwest Access Coalition</title>
   <meta name="description" content="The Midwest Access Coalition provides accommodation and support to those who travel to Chicago to access a safe, legal abortion when prohibitive legislation limits access closer to home.">
 
+  
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw",
+    authDomain: "mac-site.firebaseapp.com",
+    databaseURL: "https://mac-site.firebaseio.com",
+    projectId: "mac-site",
+    storageBucket: "mac-site.appspot.com",
+    messagingSenderId: "348676765464"
+  };
+  firebase.initializeApp(config);
+</script>
+
   <!-- JQUERY -->
   <script
     src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -126,7 +141,9 @@
 </aside>
 
           <div class="content-box">
-            <h1>Who We Are</h1>
+            <div id="mainContent"></div>
+
+<!-- <h1>Who We Are</h1>
 
 <p>The Midwest Access Coalition (MAC) envisions a world in which all people have access to safe, free, legal abortions wherever they live.</p>
 
@@ -136,12 +153,22 @@
 
 <div id="learn-more-btn"> 
 	<a href="support.html">Need an abortion? We can help.</a>
-</div>
+</div> -->
 
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      console.log("in the script tag");
+      let mainContent = document.getElementById('mainContent');
+      let firebaseHeadingRef = firebase.database().ref().child("HOME");
+      console.log(firebaseHeadingRef);
+      firebaseHeadingRef.on('value', function(datasnapshot) {
+        mainContent.innerText = datasnapshot.val();
+      })
+    </script>
 
     <div id="footer">
       <footer class="site-footer">
@@ -275,14 +302,6 @@
             
               
                 <li>
-                  <a href="/resources.html">Resources</a>
-                </li>
-              
-            
-          
-            
-              
-                <li>
                   <a href="/support.html">Get Support</a>
                 </li>
               
@@ -385,23 +404,6 @@
 </footer>
 
     </div>
-
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDV-YrLgNYaECW_5HnmCPfr9l1zTTEOalk",
-    authDomain: "mac-website-197617.firebaseapp.com",
-    databaseURL: "https://mac-website-197617.firebaseio.com",
-    projectId: "mac-website-197617",
-    storageBucket: "mac-website-197617.appspot.com",
-    messagingSenderId: "382141687627"
-  };
-  firebase.initializeApp(config);
-</script>
-
-<script type="text/javascript" src="js/hide-and-show.js"></script>
-
   </body>
 
 </html>

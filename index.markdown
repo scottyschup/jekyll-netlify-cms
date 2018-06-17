@@ -4,7 +4,9 @@ page_id: home
 layout: default
 ---
 
-<h1>Who We Are</h1>
+<div id="mainContent"></div>
+
+<!-- <h1>Who We Are</h1>
 
 <p>The Midwest Access Coalition (MAC) envisions a world in which all people have access to safe, free, legal abortions wherever they live.</p>
 
@@ -14,4 +16,4 @@ layout: default
 
 <div id="learn-more-btn"> 
 	<a href="support.html">Need an abortion? We can help.</a>
-</div>
+</div> -->
