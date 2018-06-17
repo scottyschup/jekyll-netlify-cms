@@ -36,23 +36,21 @@ If you don't have the login credentials, contact nicole@midwestaccesscoalition.o
 
 If you don't have LastPass installed, you can do so [here](https://lastpass.com/misc_download2.php).
 
-To run firebase app locally:
+To run the firebase app locally:
 ```
 # If you just need to view the site locally run
-jekyll build
+npm run serve
 
 # Else if you plan on making changes to the site and want to see your changes update automatically, run the following and leave it open
-jekyll serve
-
-firebase serve # This command must be run regardless of which option you chose above
+npm run dev
 ```
-If you run `firebase serve` and get this error message: `Error: Unable to authorize access to project mac-site`, then try running `firebase use --add` and select `mac-site` when prompted. Give it the alias "default".
+If you see this error message: `Error: Unable to authorize access to project mac-site`, then try running `npm run add` and select `mac-site` when prompted. Give the project the alias "default".
 
 If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
 
 ## Deploy
 ```
-firebase deploy
+npm run deploy
 ```
 This will deploy whatever branch you're on locally to production. If this fails and mentions something about database rules, it likely means you don't have write access and should contact <nicole@midwestaccesscoalition.org>.
 

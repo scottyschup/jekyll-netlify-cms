@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "jekyll build",
+    "jekyll": "jekyll serve",
+    "firebase": "firebase serve",
+    "add": "firebase use --add",
+    "serve": "npm run build & npm run firebase",
+    "dev": "npm run jekyll & npm run firebase",
+    "deploy": "jekyll build & firebase deploy"
+  }
+}
