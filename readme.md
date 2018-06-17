@@ -35,7 +35,7 @@ firebase login
 If you don't have the login credentials, contact nicole@midwestaccesscoalition.org to receive them through LastPass.
 
 If you don't have LastPass installed, you can do so [here](https://lastpass.com/misc_download2.php).
-```sh
+```
 firebase serve
 ```
 
