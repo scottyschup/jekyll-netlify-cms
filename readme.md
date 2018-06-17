@@ -3,18 +3,19 @@
 ### How to contribute:
 
 * Fork or clone the repo
-```sh
+```
 git clone https://github.com/MidwestAccessCoalition/firebase_site.git
 # or if you have an ssh key set up with Github:
 git clone git@github.com:MidwestAccessCoalition/firebase_site.git
 ```
 * Install gem dependencies
-```sh
+```
 bundle install
 ```
 
 * Install firebase CLI tools (if you don't already have them)
-```sh
+```
+npm update
 npm install -g firebase-tools
 ```
 
@@ -29,6 +30,12 @@ git checkout -b YOUR_BRANCH_NAME
 
 ## Local dev
 ```
+firebase login
+```
+If you don't have the login credentials, contact nicole@midwestaccesscoalition.org to receive them through LastPass.
+
+If you don't have LastPass installed, you can do so [here](https://lastpass.com/misc_download2.php).
+```sh
 firebase serve
 ```
 
