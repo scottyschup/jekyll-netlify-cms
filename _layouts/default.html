@@ -29,7 +29,8 @@
       let firebaseHeadingRef = firebase.database().ref().child("HOME");
       console.log(firebaseHeadingRef);
       firebaseHeadingRef.on('value', function(datasnapshot) {
-        mainContent.innerText = datasnapshot.val();
+        debugger
+        mainContent.innerHTML = datasnapshot.val();
       })
     </script>
 
