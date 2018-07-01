@@ -1,0 +1,110 @@
+//Navigation Pane Styles
+.trigger-nav {
+    float: right;
+    display: inline-block;
+}
+
+.nav .open>a:active, .nav .open>a:focus, .nav .open>a:hover {
+    border: $chartreuse-border;
+}
+
+.site-nav {
+    display: block;
+    width: 100%;
+    // border: $chartreuse solid 1px;
+    // padding: 0 10px;
+    border-radius: 4px;
+
+    .navbar-nav {
+        li {
+            margin: 5px;
+            text-align: right;
+        }
+    }
+    .page-link {
+        @include box-link-styles;
+        border-radius: 4px;
+    }
+
+    .nav-label{
+        display: none;
+    }
+
+    .nav-items{
+        li{
+            float:left;
+            margin: 8px;
+        }
+    }
+    .navbar-toggle {
+        background-color: #EEEEEE;
+        border: 1px solid #CCCC33;
+    }
+    .icon-bar {
+        background-color: #CCCC33;
+    }
+
+    @include media-query($on-palm) {
+        background-color: none;
+        // border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        ul {
+            margin: unset;
+        }
+        .nav-label {
+            display: table-cell;
+            float: right;
+            width: 20%;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .nav-items{
+            width:100%;
+            li{
+                float: unset;
+                margin: unset;
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+        }
+
+        .page-link {
+            display: block;
+            border-radius: unset;
+        }
+
+
+        .nav li{
+            position: relative;
+        }
+
+        .nav li a{
+            display: block;
+        }
+    }
+}
+.dropdown-menu {
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 4px;
+    border: $chartreuse-border;
+    background-color: $light-grey;
+}
+.open {
+    background-color: $light-grey;    
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    text-align: right;
+    border-radius: 4px;
+}

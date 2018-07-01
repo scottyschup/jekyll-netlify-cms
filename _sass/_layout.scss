@@ -1,0 +1,337 @@
+// HOME PAGE SPECIFIC
+
+#learn-more-btn {
+    margin: 1.5em auto;
+    a {
+        font-size: 1.3em;
+        margin-left: 20%;
+        font-weight: bold;
+    }
+}
+
+
+// DROPDOWN
+
+#container{
+    position: absolute;
+    z-index: 1001;
+}
+a.mainNav{
+    color: White;
+    font-weight: bold;
+    font-size: 12px;
+    height: 40px;
+    padding: 0px 10px;
+    line-height: 40px;
+    float: left;
+    background-color: #1D3E66;
+}
+a.mainNav:hover{
+    background-color: #3D6199;
+    color: #AAAAAA;
+}
+a.selectedRollover{
+    color: White;
+    font-weight: bold;
+    font-size: 12px;
+    height: 40px;
+    padding: 0px 10px;
+    line-height: 40px;
+    float: left;
+    background-color: #3D6199;
+}
+// END DROPDOWN
+
+// END NAV
+
+
+/**
+ * Site header
+ */
+
+.site-header {
+    // border-top: 5px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-light;
+    // min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    img {
+        float: left;
+    }
+    .trigger-nav {
+        float: right;
+    }
+    @include media-query($on-palm) {
+        background-color: $off-white;
+        border-bottom: $chartreuse solid 2px;
+        .nav-bar{
+            position: fixed;
+            display: table;
+            width: 100%;
+            text-align: center;
+            margin: unset;
+        }
+        img {
+            display: none;
+        }
+    }
+}
+
+.site-title {
+    &:visited {
+        color: $grey-color-dark;
+    }
+    .site-title-text{
+        display: none;
+    }
+    @extend %clearfix;
+    @include media-query($on-palm) {
+        display: table-cell;
+        float: left;
+        width: 75%;
+        img{
+            display:none;
+        }
+        .site-title-text{
+            text-align: left;
+            display: unset;
+            font-size: 1.2em;
+        }
+    }
+}
+
+
+/**
+ * Page content
+ */
+
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.wrapper .page-content {
+    background-color: $background-color;
+    margin: 30px 40px;
+    border: $chartreuse-border;
+    width: 90%;
+}
+/* make the page content and sidebar play nice */
+.page-content .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+.content-box {
+    background-color: $background-color;
+    border: $chartreuse-border;
+    margin: 30px;
+    padding: 20px;
+}
+
+.event-brite-content-box{
+    border: $purple-border;
+    padding: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    header, .content {
+        padding: 20px;
+        width: 100%;
+    }
+    .event-expando {
+        float: right;
+        margin-left: 5px;
+    }
+    img {
+        width: 100%;
+    }
+    .content, img, .event-expando-close {
+        display: none;
+
+        .event-expanded & {
+            display: block;
+        }
+    }
+    .event-expanded & .event-expando-open {
+        display:none;
+    }
+}
+
+
+// Team Page
+
+.team {
+    margin: 0 $spacing-unit;
+    h4 {
+        margin-bottom: -$spacing-unit/7;
+    }
+    p {
+        color: $purple;
+    }
+}
+
+
+
+/**
+ * Posts
+ */
+
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+
+// WIDGETS
+
+.social-widgets {
+    p {
+        padding: 2em;
+    }
+}
+
+#facebook-iframe-container {
+    width: 230px;
+    margin: auto;
+}
+
+.ways-to-connect {
+    &:after {
+        @include clearfix;
+    }
+}
+
+section.ways-to-connect div.social-widgets {
+    h3 {
+        color: $purple;
+        font-size: 1.5em;
+        display: inline-block;
+    }
+}
+
+#facebook-text {
+    text-align: center;
+    padding: 1em 0;
+}
+
+#twitter-text {
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#get-in-touch-text {
+    text-align: center;
+    padding: 1em 0 0.5em 0;
+    width: 100%;
+}
+
+.quote {
+    background-color: lighten($purple, 50%);
+    padding: $spacing-unit/2;
+    margin-bottom: $spacing-unit;
+    border: $purple 1px solid;
+    border-radius: 5px;
+    font-size: .75em;
+}
+// END WIDGETS
+
+// Sticky footer code from http://www.themaninblue.com/writing/perspective/2005/08/29/
+
+html
+{
+height: 100%;
+}
+
+body
+{
+height: 100%;
+}
+
+#nonFooter
+{
+position: relative;
+min-height: 100%;
+}
+
+* html #nonFooter
+{
+height: 100%;
+}
+
+#content
+{
+// padding-bottom: 9em;
+}
+
+#footer
+{
+position: relative;
+margin-top: -2em;
+background: $chartreuse;
+}

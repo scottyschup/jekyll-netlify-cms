@@ -1,0 +1,139 @@
+.site-footer {
+  padding: $spacing-unit 0;
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: $spacing-unit/2;
+}
+
+.footer-container {
+  width: 90%;
+  margin: $spacing-unit 40px;
+}
+
+.footer-nav {
+  display: inline-block;
+  li {
+      list-style: none;
+  }
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.address {
+  color: $purple;
+}
+
+.paypal-footer {
+  display: block;
+  margin-bottom: $spacing-unit;
+}
+
+.social-media-list {
+  display: block;
+  list-style: none;
+  li {
+    display: inline-block;
+    padding: .5em;
+    border-radius: 50%;
+    margin: .5em .25em;
+    background-color: lighten($chartreuse, 20%);
+    &:hover {
+      background: $purple;
+    }
+  }
+  @include media-query($on-palm) {
+    margin-left: $spacing-unit;
+    width: 100%;
+    margin: 0 auto;
+    li {
+      margin: 0 .25em;
+    }
+  }
+}
+
+.email-list-join {
+  text-align: right;
+  p {
+    font-family: $base-font-family;
+    color: $light-grey;
+    font-size: 1em;
+  }
+  input {
+    font-family: $base-font-family;
+    font-weight: lighter;
+    line-height: 2em;
+    margin-bottom: 20px;
+  }
+  @include media-query($on-palm) {
+    text-align: left;
+    margin-bottom: $spacing-unit/2;
+  }
+}
+
+.submit-btn {
+  float: right;
+  color: $purple;
+  background-color: $off-white;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: $purple;
+    color: $off-white;
+  }
+  @include media-query($on-palm) {
+    float: left;
+  }
+}
+
+.donate-btn {
+  padding: 10px;
+  background-color: $light-grey;
+  color: $purple;
+  border-radius: 10px;
+  &:hover {
+    background-color: $purple;
+    color: $light-grey;
+    text-decoration: none;
+  }
+}
+
+.footer-row {
+  float: right;
+  @include media-query($on-palm) {
+    float: none;
+    margin-left: $spacing-unit; 
+  }
+}
+
+.laptop-only {
+  @include media-query($on-palm) {
+    display: none;
+  }
+}
+
+.main-mobile-footer {
+  @extend %clearfix;
+}
+
+.contact-list {
+  margin-top: 10px;
+}
+
+.mobile-only {
+  display: none;
+  @include media-query($on-palm) {
+    display: block;
+  }
+}
+
+.wrapper {
+  @include media-query($on-palm) {
+    padding: 0;
+    margin: 0;
+    width: 90%;
+  }
+}
