@@ -54,14 +54,10 @@ Icon[\r]
 
 # Project generated files #
 ###########################
-bower_components
-bundle.js*
-derby.log
 **/*.log
 logs
-metastore_db
 node_modules
 **/*.tmp
 firebase-debug.log
 .sass-cache
-
+_site

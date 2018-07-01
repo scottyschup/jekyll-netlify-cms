@@ -8,7 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
-gems:
+plugins:
 # leaving this here to show it's an option
 # - jekyll-admin
 exclude:
@@ -18,7 +18,7 @@ exclude:
 - vendor
 - Procfile
 - Rakefile
-baseurl: 
+baseurl:
 url: http://midwestaccesscoalition.github.io
 twitter_username: MidwestAccess
 github_username: MidwestAccessCoalition
