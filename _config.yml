@@ -1,0 +1,39 @@
+---
+title: Midwest Access Coalition
+timezone: America/Chicago
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+gems:
+# leaving this here to show it's an option
+# - jekyll-admin
+exclude:
+- config.ru
+- Gemfile
+- Gemfile.lock
+- vendor
+- Procfile
+- Rakefile
+baseurl: 
+url: http://midwestaccesscoalition.github.io
+twitter_username: MidwestAccess
+github_username: MidwestAccessCoalition
+facebook_username: midwestaccesscoalition
+upcoming_event: false
+upcoming_event_id: 41653425517
+upcoming_event_eb_url: https://www.eventbrite.com/e/4th-annual-mac-cheese-competition-tickets-41653425517
+upcoming_event_name: 4th Annual MAC & Cheese Competition
+upcoming_event_description: MAC is back with our 4th Annual MAC & Cheese Competition to support grassroots abortion access! Get your ticket for all-you-can-eat MAC & Cheese + desserts + open bar + DJ + silent auction. VIP ticket includes early entry to the event at 6:30 and a limited edition MAC t-shirt!
+upcoming_event_img_path: img/event-flyer.jpg
+501_c_3_text_question: Is MAC a 501(c)3?
+501_c_3_text_answer: Why yes! MAC is a 501(c)3 non-profit organization, and any donations
+  will be tax-deductible.
+markdown: kramdown
+email: info@midwestaccesscoalition.org
+description: The Midwest Access Coalition provides accommodation and support to those
+  who travel to Chicago to access a safe, legal abortion when prohibitive legislation
+  limits access closer to home.
