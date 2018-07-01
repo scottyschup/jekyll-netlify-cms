@@ -14,6 +14,6 @@ layout: default
 
 <p>MAC is a 501(c)3 non-profit organization. All donations are tax deductible.</p>
 
-<div id="learn-more-btn">
+<div id="learn-more-btn"> 
 	<a href="support.html">Need an abortion? We can help.</a>
 </div> -->
