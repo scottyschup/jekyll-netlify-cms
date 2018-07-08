@@ -6,7 +6,7 @@ var SITE_PAGES_REGISTRY_SS_ID = '1E2m3XZb_MLFhLd_gNztly20FvIHQnOVumJUY6cUPN_g';
 var ACTIVE_DOCUMENT = DocumentApp.getActiveDocument();
 
 function onInstall(e) {
- onOpen(e); 
+ onOpen(e);
 }
 
 function onOpen(e) {
@@ -44,14 +44,15 @@ function ConvertGoogleDocToCleanHtml() {
 }
 
 function writeToFirebase(html) {
-  var base = FirebaseApp.getDatabaseByUrl("https://mac-site.firebaseio.com/");
+  var secret = PropertiesService.getScriptProperties().getProperty('database_secret');
+  var base = FirebaseApp.getDatabaseByUrl("https://mac-site.firebaseio.com/", secret);
   base.setData(ACTIVE_DOCUMENT.getName(), html);
 }
 
 function getPublishedDocId() {
   var registrySheet = SpreadsheetApp.openById(SITE_PAGES_REGISTRY_SS_ID).getSheetByName('NavBar');
   var editableDocIds = registrySheet.getRange(2, 4, registrySheet.getLastRow()).getValues(); // row 1 is header row, column 4 (D) is where editable doc ids are
-  
+
   // Note -- findIndex is not a google appscript but rather array prototype method we add here ;)
   var matchingRow = editableDocIds.findIndex(ACTIVE_DOCUMENT.getId()) + 2; // have to offset the headers
   targetPublishToDocId = registrySheet.getRange("C" + matchingRow).getValue();
@@ -82,9 +83,9 @@ function processItem(item, listCounters, images) {
   if (item.getType() == DocumentApp.ElementType.PARAGRAPH) {
     switch (item.getHeading()) {
         // Add a # for each heading level. No break, so we accumulate the right number.
-      case DocumentApp.ParagraphHeading.HEADING6: 
+      case DocumentApp.ParagraphHeading.HEADING6:
         prefix = "<h6>", suffix = "</h6>"; break;
-      case DocumentApp.ParagraphHeading.HEADING5: 
+      case DocumentApp.ParagraphHeading.HEADING5:
         prefix = "<h5>", suffix = "</h5>"; break;
       case DocumentApp.ParagraphHeading.HEADING4:
         prefix = "<h4>", suffix = "</h4>"; break;
@@ -94,7 +95,7 @@ function processItem(item, listCounters, images) {
         prefix = "<h2>", suffix = "</h2>"; break;
       case DocumentApp.ParagraphHeading.HEADING1:
         prefix = "<h1>", suffix = "</h1>"; break;
-      default: 
+      default:
         prefix = "<p>", suffix = "</p>";
     }
 
@@ -178,7 +179,7 @@ function processText(item, output) {
   var text = item.getText();
   Logger.log(text);
   var indices = item.getTextAttributeIndices();
-  
+
   Logger.log(indices);
   if (indices.length <= 1) {
     //Logger.log("I'm in branch one");
