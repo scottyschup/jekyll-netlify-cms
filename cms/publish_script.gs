@@ -183,22 +183,22 @@ function processText(item, output) {
   Logger.log(indices);
   if (indices.length <= 1) {
     //Logger.log("I'm in branch one");
+    var textHTML = text;
+    if (item.isBold()) {
+      textHTML = '<b>' + textHTML + '</b>';
+    }
+    if (item.getLinkUrl()) {
+      textHTML = '<a href="'+ item.getLinkUrl() + '">' + textHTML + '</a>';
+    } else if (text.trim().indexOf('http://') == 0) {
+     textHTML = '<a href="' + textHTML + '" rel="nofollow">' + textHTML + '</a>';
+    }
     // Assuming that a whole para fully italic is a quote
-    if(item.isBold()) {
-      output.push('<b>' + text + '</b>');
+    // <blockquote></blockquote> must be added last because it must be the outermost
+    // set of tags. <blockquote> is a block element while <b> and <a> are inline.
+    if (item.isItalic()) {
+      textHTML = '<blockquote>' + textHTML + '</blockquote>';
     }
-    else if(item.isItalic()) {
-      output.push('<blockquote>' + text + '</blockquote>');
-    }
-    else if (item.getLinkUrl()) {
-      output.push('<a href="'+ item.getLinkUrl() + '">' + text + '</a>');
-    }
-    else if (text.trim().indexOf('http://') == 0) {
-      output.push('<a href="' + text + '" rel="nofollow">' + text + '</a>');
-    }
-    else {
-      output.push(text);
-    }
+    output.push(textHTML);
   }
   else {
     //Logger.log("I'm in branch two");
