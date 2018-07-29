@@ -81,24 +81,11 @@ function processItem(item, listCounters, images) {
   var prefix = "", suffix = "";
 
   if (item.getType() == DocumentApp.ElementType.PARAGRAPH) {
-    switch (item.getHeading()) {
-        // Add a # for each heading level. No break, so we accumulate the right number.
-      case DocumentApp.ParagraphHeading.HEADING6:
-        prefix = "<h6>", suffix = "</h6>"; break;
-      case DocumentApp.ParagraphHeading.HEADING5:
-        prefix = "<h5>", suffix = "</h5>"; break;
-      case DocumentApp.ParagraphHeading.HEADING4:
-        prefix = "<h4>", suffix = "</h4>"; break;
-      case DocumentApp.ParagraphHeading.HEADING3:
-        prefix = "<h3>", suffix = "</h3>"; break;
-      case DocumentApp.ParagraphHeading.HEADING2:
-        prefix = "<h2>", suffix = "</h2>"; break;
-      case DocumentApp.ParagraphHeading.HEADING1:
-        prefix = "<h1>", suffix = "</h1>"; break;
-      default:
-        prefix = "<p>", suffix = "</p>";
-    }
-
+    // getCssClasses() can currently only add .center-align
+    var cssClasses = getCssClasses(item);
+    var htmlElementType = getHtmlElementType(item);
+    prefix = getHtmlElementPrefix(htmlElementType, cssClasses);
+    suffix = getHtmlElementSuffix(htmlElementType);
     if (item.getNumChildren() == 0)
       return "";
   }
@@ -278,4 +265,44 @@ function processImage(item, images, output)
     "blob": blob,
     "type": contentType,
     "name": name});
+}
+
+function getCssClasses(item) {
+  if (item.getAlignment() === DocumentApp.HorizontalAlignment.CENTER) {
+    return "center-align";
+  } else {
+    return "";
+  }
+}
+
+function getHtmlElementType(paragraph) {
+  switch (paragraph.getHeading()) {
+    // Add a # for each heading level. No break, so we accumulate the right number.
+    case DocumentApp.ParagraphHeading.HEADING6:
+      return "h6"; break;
+    case DocumentApp.ParagraphHeading.HEADING5:
+      return "h5"; break;
+    case DocumentApp.ParagraphHeading.HEADING4:
+      return "h4"; break;
+    case DocumentApp.ParagraphHeading.HEADING3:
+      return "h3"; break;
+    case DocumentApp.ParagraphHeading.HEADING2:
+      return "h2"; break;
+    case DocumentApp.ParagraphHeading.HEADING1:
+      return "h1"; break;
+    default:
+      return "p";
+  }
+}
+
+function getHtmlElementPrefix(elementType, cssClasses) {
+  if (!cssClasses || cssClasses === "") {
+    return "<" + elementType + ">";
+  } else {
+    return "<" + elementType + ' class="' + cssClasses + '">';
+  }
+}
+
+function getHtmlElementSuffix(elementType) {
+  return "</" + elementType + ">";
 }
