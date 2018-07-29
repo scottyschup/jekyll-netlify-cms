@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "build": "jekyll build",
-    "jekyll": "jekyll serve",
+    "build": "bundle exec jekyll build --watch",
+    "jekyll": "bundle exec jekyll serve",
     "firebase": "firebase serve",
     "add": "firebase use --add",
     "serve": "npm run build & npm run firebase",
     "dev": "npm run jekyll & npm run firebase",
-    "deploy": "jekyll build & firebase deploy"
+    "deploy": "bundle exec jekyll build & firebase deploy"
   }
 }
