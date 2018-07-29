@@ -1,13 +1,12 @@
+--- 
+---
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
 
   <body>
     <div id="nonFooter">
-
       {% include header.html %}
-
       <div class="page-content">
         {% if site.upcoming_event %}
         <div class="wrapper">
@@ -22,18 +21,16 @@
         </div>
       </div>
     </div>
-
     <script>
-      console.log("in the script tag");
+      let referenceName = `{{page.firebase_title}}`;
       let mainContent = document.getElementById('mainContent');
-      let firebaseHeadingRef = firebase.database().ref().child("HOME");
-      console.log(firebaseHeadingRef);
-      firebaseHeadingRef.on('value', function(datasnapshot) {
-        debugger
-        mainContent.innerHTML = datasnapshot.val();
-      })
+      if (referenceName !== "") {
+        let firebaseHeadingRef = firebase.database().ref().child(referenceName);
+        firebaseHeadingRef.on('value', function(datasnapshot) {
+          mainContent.innerHTML = datasnapshot.val();
+        })
+      }
     </script>
-
     <div id="footer">
       {% include footer.html %}
     </div>
