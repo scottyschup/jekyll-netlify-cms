@@ -1,10 +1,11 @@
---- 
+---
 ---
 <!DOCTYPE html>
 <html>
   {% include head.html %}
 
   <body>
+    <!-- Default Layout -->
     <div id="nonFooter">
       {% include header.html %}
       <div class="page-content">
@@ -21,6 +22,10 @@
         </div>
       </div>
     </div>
+    <div id="footer">
+      {% include footer.html %}
+    </div>
+    <!-- <script scr="js/pull_firebase_content.js"></script> -->
     <script>
       let referenceName = `{{page.firebase_title}}`;
       let mainContent = document.getElementById('mainContent');
@@ -31,9 +36,7 @@
         })
       }
     </script>
-    <div id="footer">
-      {% include footer.html %}
-    </div>
+    <script src="js/hide-and-show.js"></script>
   </body>
 
 </html>

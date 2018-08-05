@@ -1,7 +1,4 @@
-
-<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
+(function () {
   var config = {
     apiKey: "AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw",
     authDomain: "mac-site.firebaseapp.com",
@@ -11,4 +8,4 @@
     messagingSenderId: "348676765464"
   };
   firebase.initializeApp(config);
-</script>
+})();

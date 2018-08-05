@@ -1,11 +1,10 @@
-$("#recurring-donation").hide();
-
 $(document).ready(function() {
-	var hash = location.hash;
-	if (hash === "#recurring-donation") {
-		$(".donation-btn").hide();
-		$(hash).show();
-	}
+  $("#recurring-donation").hide();
+    var hash = location.hash;
+    if (hash === "#recurring-donation") {
+      $(".donation-btn").hide();
+      $(hash).show();
+    }
 });
 
 $( "#recurring" ).click(function(){

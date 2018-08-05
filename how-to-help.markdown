@@ -23,5 +23,4 @@ We host volunteer trainings on an ongoing basis and are always looking to grow o
 
 As we're a grassroots, community-funded organization, making a donation is also a great way to help MAC!
 
-{% include paypal.html %}
-
+{% include donate/donation_options.html %}
