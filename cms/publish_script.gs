@@ -1,8 +1,12 @@
-// PublishtoHTML v9
+// PublishtoHTML v11
+// (Note: there was no v10)
 
 // This is dependent upon FirebaseApp
 // See:  https://sites.google.com/site/scriptsexamples/new-connectors-to-google-services/firebase
 // Source Code:  https://script.google.com/d/1hguuh4Zx72XVC1Zldm_vTtcUUKUA6iBUOoGnJUWLfqDWx5WlOJHqYkrt/edit
+
+// Load underscore.js 1.8.3: https://github.com/simula-innovation/gas-underscore
+var _ = Underscore.load();
 
 var SITE_PAGES_REGISTRY_SS_ID = '1E2m3XZb_MLFhLd_gNztly20FvIHQnOVumJUY6cUPN_g';
 var ACTIVE_DOCUMENT = DocumentApp.getActiveDocument();
@@ -37,7 +41,8 @@ Array.prototype.findIndex = function(search){
 
 function ConvertGoogleDocToCleanHtml(options) {
   if (!options) { options = {} };
-  var body = ACTIVE_DOCUMENT.getBody();
+  // Deep-copy the document to ensure that processing won't change the original document
+  var body = ACTIVE_DOCUMENT.getBody().copy();
   var numChildren = body.getNumChildren();
   var output = [];
   var images = [];
@@ -180,7 +185,8 @@ function processItem(item, listCounters, images) {
 
 
 function processText(item, output) {
-  var text = item.getText();
+  // Escape HTML
+  var text = _.escape(item.getText());
   Logger.log(text);
   var indices = item.getTextAttributeIndices();
 
