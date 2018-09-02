@@ -1,9 +1,23 @@
+// PublishtoHTML v11
+// (Note: there was no v10)
+
 // This is dependent upon FirebaseApp
 // See:  https://sites.google.com/site/scriptsexamples/new-connectors-to-google-services/firebase
 // Source Code:  https://script.google.com/d/1hguuh4Zx72XVC1Zldm_vTtcUUKUA6iBUOoGnJUWLfqDWx5WlOJHqYkrt/edit
 
+// Load underscore.js 1.8.3: https://github.com/simula-innovation/gas-underscore
+var _ = Underscore.load();
+
 var SITE_PAGES_REGISTRY_SS_ID = '1E2m3XZb_MLFhLd_gNztly20FvIHQnOVumJUY6cUPN_g';
 var ACTIVE_DOCUMENT = DocumentApp.getActiveDocument();
+var DATABASE_SECRETS = {
+  staging: 'staging_database_secret',
+  production: 'database_secret'
+}
+var DATABASE_URLS = {
+  staging: 'staging_database_url',
+  production: 'database_url'
+}
 
 function onInstall(e) {
  onOpen(e);
@@ -25,8 +39,10 @@ Array.prototype.findIndex = function(search){
   return -1;
 }
 
-function ConvertGoogleDocToCleanHtml() {
-  var body = ACTIVE_DOCUMENT.getBody();
+function ConvertGoogleDocToCleanHtml(options) {
+  if (!options) { options = {} };
+  // Deep-copy the document to ensure that processing won't change the original document
+  var body = ACTIVE_DOCUMENT.getBody().copy();
   var numChildren = body.getNumChildren();
   var output = [];
   var images = [];
@@ -39,13 +55,19 @@ function ConvertGoogleDocToCleanHtml() {
   }
 
   var html = output.join('\r');
-  writeToFirebase(html);
+  writeToFirebase(html, {preview: options.preview});
   //createDocumentForHtml(html, images);
 }
 
-function writeToFirebase(html) {
-  var secret = PropertiesService.getScriptProperties().getProperty('database_secret');
-  var base = FirebaseApp.getDatabaseByUrl("https://mac-site.firebaseio.com/", secret);
+function getDatabase(options) {
+  var databaseType = options.preview ? 'staging' : 'production';
+  var url = PropertiesService.getScriptProperties().getProperty(DATABASE_URLS[databaseType]);
+  var secret = PropertiesService.getScriptProperties().getProperty(DATABASE_SECRETS[databaseType]);
+  return FirebaseApp.getDatabaseByUrl(url, secret);
+}
+
+function writeToFirebase(html, options) {
+  var base = getDatabase(options);
   base.setData(ACTIVE_DOCUMENT.getName(), html);
 }
 
@@ -163,7 +185,8 @@ function processItem(item, listCounters, images) {
 
 
 function processText(item, output) {
-  var text = item.getText();
+  // Escape HTML
+  var text = _.escape(item.getText());
   Logger.log(text);
   var indices = item.getTextAttributeIndices();
 
