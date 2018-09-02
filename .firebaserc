@@ -1,7 +1,8 @@
 {
   "projects": {
-    "default": "mac-site",
+    "default": "dev-site-9bb74",
     "staging": "staging-f8acb",
-    "dev": "dev-site-9bb74"
+    "dev": "dev-site-9bb74",
+    "prod": "mac-site"
   }
 }
