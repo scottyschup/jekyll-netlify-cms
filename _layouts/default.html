@@ -25,7 +25,9 @@
     <div id="footer">
       {% include footer.html %}
     </div>
-    <!-- <script scr="js/pull_firebase_content.js"></script> -->
+    <script async=false>
+      window.firebasePageTitle = `{{ page.firebase_title }}`;
+    </script>
     <script src="js/pull_firebase_content.js"></script>
     <script src="js/hide-and-show.js"></script>
   </body>
