@@ -1,11 +1,13 @@
 {
   "scripts": {
-    "build": "bundle exec jekyll build --watch",
-    "jekyll": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build --watch --config _config.yml,config/development.yml",
+    "jekyll": "bundle exec jekyll serve --config _config.yml,config/development.yml",
     "firebase": "firebase serve",
     "add": "firebase use --add",
     "serve": "npm run jekyll & npm run firebase",
     "dev": "npm run build & npm run firebase",
-    "deploy": "bundle exec jekyll build & firebase deploy"
+    "deploy": "bundle exec jekyll build --config _config.yml,config/production.yml & firebase deploy -P mac-site",
+    "staging-deploy": "bundle exec jekyll build --config _config.yml,config/staging.yml & firebase deploy -P staging-f8acb",
+    "dev-deploy": "bundle exec jekyll build --config _config.yml,config/development.yml & firebase deploy -P dev-site-9bb74"
   }
 }

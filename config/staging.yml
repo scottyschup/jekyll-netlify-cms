@@ -1,0 +1,7 @@
+deploy_config:
+  api_key: AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw
+  auth_domain: staging-f8acb.firebaseapp.com
+  database_url: https://staging-f8acb.firebaseio.com
+  project_id: staging-f8acb
+  storage_bucket: staging-f8acb.appspot.com
+  messaging_sender_id: 348676765464
