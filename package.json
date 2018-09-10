@@ -4,8 +4,8 @@
     "jekyll": "bundle exec jekyll serve",
     "firebase": "firebase serve",
     "add": "firebase use --add",
-    "serve": "npm run build & npm run firebase",
-    "dev": "npm run jekyll & npm run firebase",
+    "serve": "npm run jekyll & npm run firebase",
+    "dev": "npm run build & npm run firebase",
     "deploy": "bundle exec jekyll build & firebase deploy"
   }
 }
