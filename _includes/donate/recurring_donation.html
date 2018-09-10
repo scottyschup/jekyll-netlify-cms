@@ -1,29 +1,32 @@
 <form id="recurring-donation-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-	<input type="hidden" name="cmd" value="_xclick-subscriptions">
-	<input type="hidden" name="business" value="FCUWUBDAF4LTU">
-	<input type="hidden" name="lc" value="US">
-	<input type="hidden" name="item_name" value="Recurring Donation Button">
-	<input type="hidden" name="no_note" value="1">
-	<input type="hidden" name="no_shipping" value="2">
-	<input type="hidden" name="src" value="1">
-	<input type="hidden" name="a3" value="1.00">
-	<input type="hidden" name="p3" value="1">
-	<input type="hidden" name="currency_code" value="USD">
-	<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHosted">
+  <input type="hidden" name="cmd" value="_xclick-subscriptions">
+  <input type="hidden" name="business" value="FCUWUBDAF4LTU">
+  <input type="hidden" name="lc" value="US">
+  <input type="hidden" name="item_name" value="MAC Recurring Donation">
+  <input type="hidden" name="no_note" value="1">
+  <input type="hidden" name="no_shipping" value="2">
+  <input type="hidden" name="src" value="1">
+  <input type="hidden" name="a3" value="1.00">
+  <input type="hidden" name="p3" value="1">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHosted">
 
-	<div class="form-item">
-		<label for="donation-frequency">
+  <div class="form-item">
+    <label for="donation-frequency">
       How often would you like this donation to occur?
     </label>
-		<select id="donation-frequency" class="form-control" name="t3">
-			<option value="M">Monthly </option>
-			<option value="W">Weekly </option>
-			<option value="Y">Yearly </option>
-		</select>
-	</div>
-	<div class="form-item form-group">
-		<label for="donation-amount">Enter your donation amount:</label>
-		<input id="donation-amount" class="form-control" type="text" name="a3" maxlength="60">
-	</div>
-	<input class="recurring-donation-btn" type="submit" value="Set Up My Donation" name="submit">
+    <select id="donation-frequency" class="form-control" name="t3">
+      <option value="M">Monthly </option>
+      <option value="W">Weekly </option>
+      <option value="Y">Yearly </option>
+    </select>
+  </div>
+  <div class="form-item form-group">
+    <label for="donation-amount">Enter your donation amount:</label>
+    <input id="donation-amount" class="form-control" type="text" name="a3" maxlength="60">
+  </div>
+  <input class="recurring-donation-btn" type="submit" value="Set Up My Donation" name="submit">
+  <div id="one-time-prompt">
+    <a href="javascript:void(0)">Or make a one-time donation </a>
+  </div>
 </form>

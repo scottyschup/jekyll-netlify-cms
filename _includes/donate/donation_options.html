@@ -1,13 +1,16 @@
 <section class="container-fluid paypal">
   <div class="row">
-    <div id="one-time" class="col-md-5 donation-btn">
-      {% include donate/onetime_donation.html %}
-    </div>
-    <div id="recurring" class="col-md-5 donation-btn">
-      <input class="invisible-btn" type="submit" value="Set up a recurring donation" border="0" name="submit">
+    <div id="options">
+      <div id="one-time" class="col-md-5 donation-btn">
+        {% include donate/onetime_donation.html %}
+      </div>
+      <div id="recurring-prompt" class="col-md-5 donation-btn">
+        <input class="invisible-btn" type="submit" value="Set up a recurring donation" border="0" name="submit">
+      </div>
     </div>
     <div id="recurring-donation" class="col-md-12" >
       {% include donate/recurring_donation.html %}
     </div>
   </div>
 </section>
+<script src="js/toggle_donation_options.js"></script>
