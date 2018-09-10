@@ -6,8 +6,8 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 gem 'github-pages', versions['github-pages']
 
-gem 'jekyll', '~> 3.7.3' # version needed for gh pages
-gem 'kramdown', '~> 1.11', '>= 1.11.1'
+gem 'jekyll', versions['jekyll']
+gem 'kramdown', versions['kramdown']
 # leaving this commented out to show it's an option
 # gem 'rack-jekyll'
 gem 'rake', '~> 12.3'
