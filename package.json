@@ -1,13 +1,14 @@
 {
   "scripts": {
-    "build": "bundle exec jekyll build --watch --config _config.yml,config/development.yml",
-    "jekyll": "bundle exec jekyll serve --config _config.yml,config/development.yml",
-    "firebase": "firebase serve",
     "add": "firebase use --add",
-    "serve": "npm run jekyll & npm run firebase",
-    "dev": "npm run build & npm run firebase",
-    "deploy": "bundle exec jekyll build --config _config.yml,config/production.yml & firebase deploy -P mac-site",
-    "staging-deploy": "bundle exec jekyll build --config _config.yml,config/staging.yml & firebase deploy -P staging-f8acb",
-    "dev-deploy": "bundle exec jekyll build --config _config.yml,config/development.yml & firebase deploy -P dev-site-9bb74"
+    "build:dev": "bundle exec jekyll build --config _config.yml, config/development.yml",
+    "build:staging": "bundle exec jekyll build --config _config.yml, config/staging.yml",
+    "build:production": "bundle exec jekyll build --config _config.yml, config/production.yml",
+    "deploy:dev": "npm run build:dev & firebase deploy -P dev-site-9bb74",
+    "deploy:staging": "npm run build:staging & firebase deploy -P staging-f8acb",
+    "deploy:prod": "npm run build:prod & firebase deploy -P mac-site",
+    "serve:jekyll": "bundle exec jekyll serve --config _config.yml",
+    "serve:firebase": "firebase serve",
+    "dev": "npm run serve:jekyll & npm run serve:firebase",
   }
 }
