@@ -7,7 +7,7 @@
     "deploy:dev": "npm run build:dev & firebase deploy -P dev-site-9bb74",
     "deploy:staging": "npm run build:staging & firebase deploy -P staging-f8acb",
     "deploy:prod": "npm run build:prod & firebase deploy -P mac-site",
-    "serve:jekyll": "bundle exec jekyll serve --config _config.yml",
+    "serve:jekyll": "bundle exec jekyll serve --config _config.yml, config/development.yml",
     "serve:firebase": "firebase serve",
     "dev": "npm run serve:jekyll & npm run serve:firebase",
   }
