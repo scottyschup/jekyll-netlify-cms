@@ -3,12 +3,12 @@
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw",
-    authDomain: "mac-site.firebaseapp.com",
-    databaseURL: "https://mac-site.firebaseio.com",
-    projectId: "mac-site",
-    storageBucket: "mac-site.appspot.com",
-    messagingSenderId: "348676765464"
+    apiKey: "{{ site.deploy_config.api_key }}",
+    authDomain: "{{ site.deploy_config.auth_domain }}",
+    databaseURL: "{{ site.deploy_config.database_url }}",
+    projectId: "{{ site.deploy_config.project_id }}",
+    storageBucket: "{{ site.deploy_config.storage_bucket }}",
+    messagingSenderId: "{{ site.deploy_config.messaging_sender_id }}",
   };
   firebase.initializeApp(config);
 </script>

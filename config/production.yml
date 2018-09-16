@@ -1,0 +1,7 @@
+deploy_config:
+  api_key: AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw
+  auth_domain: mac-site.firebaseapp.com
+  database_url: https://mac-site.firebaseio.com
+  project_id: mac-site
+  storage_bucket: mac-site.appspot.com
+  messaging_sender_id: 348676765464
