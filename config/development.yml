@@ -1,0 +1,7 @@
+deploy_config:
+  api_key: AIzaSyC3PD1_rkiDsHyqFOl_ZhtE8tmTM3Cncfw
+  auth_domain: dev-site-9bb74.firebaseapp.com
+  database_url: https://dev-site-9bb74.firebaseio.com
+  project_id: dev-site-9bb74
+  storage_bucket: dev-site-9bb74.appspot.com
+  messaging_sender_id: 348676765464

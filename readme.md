@@ -49,6 +49,7 @@ If you see this error message: `Error: Unable to authorize access to project mac
 If `mac-site` doesn't appear as an option, then contact <nicole@midwestaccesscoalition.org>.
 
 ## Deploy
+To deploy to production, run:
 ```
 npm run deploy
 ```
@@ -58,3 +59,13 @@ This will deploy whatever branch you're on locally to production. If this fails 
 * Firebase URL: https://mac-site.firebaseapp.com
 
 You can access the Firebase console at https://console.firebase.google.com/u/0/project/mac-site/overview.
+
+The corresponding info for the development and staging environments is as follows:
+
+### Development
+* Deploy command: `npm run dev-deploy`
+* URL: https://dev-site-9bb74.firebase.com
+
+### Staging
+* Deploy command: `npm run staging-deploy`
+* URL: https://staging-f8acb.firebase.com
