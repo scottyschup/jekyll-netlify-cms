@@ -1,13 +1,13 @@
 {
   "scripts": {
     "add": "firebase use --add",
-    "build:dev": "bundle exec jekyll build --config _config.yml, config/development.yml",
-    "build:staging": "bundle exec jekyll build --config _config.yml, config/staging.yml",
-    "build:prod": "bundle exec jekyll build --config _config.yml, config/production.yml",
+    "build:dev": "bundle exec jekyll build --config _config.yml,config/development.yml",
+    "build:staging": "bundle exec jekyll build --config _config.yml,config/staging.yml",
+    "build:prod": "bundle exec jekyll build --config _config.yml,config/production.yml",
     "deploy:dev": "npm run build:dev & firebase deploy -P dev-site-9bb74",
     "deploy:staging": "npm run build:staging & firebase deploy -P staging-f8acb",
     "deploy:prod": "npm run build:prod & firebase deploy -P mac-site",
-    "serve:jekyll": "npm run build:dev; bundle exec jekyll serve --config _config.yml, config/development.yml",
+    "serve:jekyll": "npm run build:dev; bundle exec jekyll serve --config _config.yml,config/development.yml",
     "serve:firebase": "firebase serve",
     "dev": "npm run serve:jekyll & npm run serve:firebase"
   }
