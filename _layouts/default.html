@@ -25,18 +25,12 @@
     <div id="footer">
       {% include footer.html %}
     </div>
-    <!-- <script scr="js/pull_firebase_content.js"></script> -->
     <script>
-      let referenceName = `{{page.firebase_title}}`;
-      let mainContent = document.getElementById('mainContent');
-      if (referenceName !== "") {
-        let firebaseHeadingRef = firebase.database().ref().child(referenceName);
-        firebaseHeadingRef.on('value', function(datasnapshot) {
-          mainContent.innerHTML = datasnapshot.val();
-        })
-      }
+      // Hack to make the current page title accessible to sourced JS files
+      window.firebasePageTitle = `{{ page.firebase_title }}`;
     </script>
-    <script src="js/hide-and-show.js"></script>
+    <script src="js/pull_firebase_content.js"></script>
+    <!-- <script src="js/hide-and-show.js"></script> -->
   </body>
 
 </html>

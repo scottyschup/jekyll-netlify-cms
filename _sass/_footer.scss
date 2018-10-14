@@ -21,6 +21,10 @@
 
 .contact-list {
   list-style: none;
+  margin-top: 10px;
+  .icon {
+    vertical-align: text-bottom;
+  }
 }
 
 .address {
@@ -105,7 +109,7 @@
   float: right;
   @include media-query($on-palm) {
     float: none;
-    margin-left: $spacing-unit; 
+    margin-left: $spacing-unit;
   }
 }
 
@@ -117,10 +121,6 @@
 
 .main-mobile-footer {
   @extend %clearfix;
-}
-
-.contact-list {
-  margin-top: 10px;
 }
 
 .mobile-only {
