@@ -1,5 +1,5 @@
-$(function(){
-  $(".event-expando").click(function(){
+$(function () {
+  $(".event-expando").click(function () {
     $("body").toggleClass("event-expanded");
   })
 })

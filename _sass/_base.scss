@@ -287,12 +287,11 @@ pre {
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 30px;
         height: 30px;
-        vertical-align: middle;
+        vertical-align: bottom;
 
         path {
             fill: $off-white;

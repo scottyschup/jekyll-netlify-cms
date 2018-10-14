@@ -5,7 +5,7 @@
 	border-radius: 10px;
 	padding: 20px;
 	margin: $spacing-unit / 2;
-	text-align: center;	
+	text-align: center;
 	&:hover {
 		background: $purple;
 		color: white;
@@ -47,6 +47,11 @@
 		padding: $spacing-unit/3;
 		margin: $spacing-unit/3 auto;
 	}
+}
+#one-time-prompt {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .recurring-donation-btn {

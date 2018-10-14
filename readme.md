@@ -69,3 +69,18 @@ The corresponding info for the development and staging environments is as follow
 ### Staging
 * Deploy command: `npm run staging-deploy`
 * URL: https://staging-f8acb.firebase.com
+
+#### Love letter to Scott, from Scott
+Dear Scott,  
+As much as you may want to, do not remove the spaces between the two config files in each of the build commands in `package.json`. I.e.
+```js
+// GOOD
+"build:dev": "bundle exec jekyll build --config _config.yml,config/development.yml"
+
+// BAD
+"build:dev": "bundle exec jekyll build --config _config.yml, config/development.yml"
+```
+I know you really want to change it. But leave it alone, man. It will break everything if you don't.
+
+❤️,
+Scott
