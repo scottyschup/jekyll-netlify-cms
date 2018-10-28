@@ -61,3 +61,5 @@ node_modules
 firebase-debug.log
 .sass-cache
 _site/
+.jekyll-metadata
+.users.yml
