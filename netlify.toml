@@ -1,4 +1,3 @@
 [build]
-  base    = "_site/"
   publish = "_site/"
   command = "npm build:prod"
