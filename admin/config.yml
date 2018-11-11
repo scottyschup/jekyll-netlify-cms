@@ -21,3 +21,8 @@ collections: # A list of collections the CMS should be able to edit
   - name: "test"
     label: "Test"
     folder: "_tests"
+    fields: # The fields each document in this collection have
+    - {label: "Layout", name: "layout", widget: "hidden", default: "test"}
+    - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Categories", name: "categories", widget: "string", required: false}
