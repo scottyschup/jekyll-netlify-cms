@@ -34,16 +34,9 @@ see a text link to "Generate access token in GitHub".
 
 Clone this repository and run:
 
-### First-time use (at least until we stop using Firebase)
-```sh
-firebase login # and then follow prompts
-firebase use dev
-```
-
-### Every-time use
 ```bash
 bundle install
-npm run dev
+bundle exec jekyll server --watch
 ```
 
 Now navigate to [localhost:4000](http://localhost:4000/) to preview the site, and
@@ -54,7 +47,7 @@ Now navigate to [localhost:4000](http://localhost:4000/) to preview the site, an
 Netlify provides basic OAuth so you can log in to Netlify CMS with your GitHub profile directly if
 you prefer not to use Netlify Identity. To do so, go to [the GitHub developer application
 screen](https://github.com/settings/developers) and **register new application**. The Authorization
-callback URL you'll need to enter is `https://api.netlify.com/auth/done`.
+callback URL you'll need to enter is `https://api.netlify.com/auth/done`. 
 
 Once you've set up the application, go back to your Netlify site dashboard, navigate to the
 **Access** tab. Then fill in your new Client ID and Client Secret in the Github Authentication
