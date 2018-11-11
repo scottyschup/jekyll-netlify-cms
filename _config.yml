@@ -12,12 +12,12 @@ plugins:
 # leaving this here to show it's an option
 # - jekyll-admin
 exclude:
-- config.ru
-- Gemfile
-- Gemfile.lock
-- vendor
-- Procfile
-- Rakefile
+  - config.ru
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - Procfile
+  - Rakefile
 baseurl:
 url: http://midwestaccesscoalition.github.io
 twitter_username: MidwestAccess

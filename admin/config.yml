@@ -26,9 +26,24 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "test"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
+      -
+        name: "layout"
+        label: "Layout"
+        widget: "hidden"
+        default: "test"
+      -
+        name: "title"
+        label: "Title"
+        widget: "string"
+        tagname: "h1"
+      -
+        name: "body"
+        label: "Body"
+        widget: "markdown"
+      -
+        name: "categories"
+        label: "Categories"
+        widget: "string"
+        required: false
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
